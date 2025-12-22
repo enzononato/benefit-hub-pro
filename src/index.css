@@ -1,0 +1,187 @@
+@import '@fontsource/dm-sans/400.css';
+@import '@fontsource/dm-sans/500.css';
+@import '@fontsource/dm-sans/600.css';
+@import '@fontsource/dm-sans/700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 97%;
+    --foreground: 240 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 15%;
+
+    --primary: 267 83% 57%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 10% 15%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 5% 45%;
+
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 240 10% 15%;
+
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 267 83% 57%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 230 25% 18%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 267 83% 57%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 230 20% 25%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 230 20% 22%;
+    --sidebar-ring: 267 83% 57%;
+    --sidebar-muted: 230 15% 60%;
+
+    --chart-1: 267 83% 57%;
+    --chart-2: 142 76% 36%;
+    --chart-3: 199 89% 48%;
+    --chart-4: 38 92% 50%;
+    --chart-5: 280 65% 60%;
+
+    /* Benefit category colors - icon colors */
+    --benefit-autoescola: 204 94% 94%;
+    --benefit-autoescola-icon: 217 91% 60%;
+    --benefit-farmacia: 138 76% 93%;
+    --benefit-farmacia-icon: 160 84% 39%;
+    --benefit-oficina: 48 100% 89%;
+    --benefit-oficina-icon: 25 95% 53%;
+    --benefit-vale-gas: 33 100% 96%;
+    --benefit-vale-gas-icon: 38 92% 50%;
+    --benefit-papelaria: 269 100% 95%;
+    --benefit-papelaria-icon: 280 65% 60%;
+    --benefit-otica: 183 100% 90%;
+    --benefit-otica-icon: 187 85% 43%;
+  }
+
+  .dark {
+    --background: 230 25% 12%;
+    --foreground: 0 0% 95%;
+
+    --card: 230 20% 15%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 230 20% 15%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 267 83% 57%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 230 15% 20%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 230 15% 20%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 230 25% 12%;
+
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
+
+    --border: 230 15% 20%;
+    --input: 230 15% 20%;
+    --ring: 267 83% 57%;
+
+    --sidebar-background: 230 25% 18%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 267 83% 57%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 230 20% 25%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 230 20% 22%;
+    --sidebar-ring: 267 83% 57%;
+    --sidebar-muted: 230 15% 60%;
+
+    /* Benefit category colors - dark mode */
+    --benefit-autoescola: 204 70% 25%;
+    --benefit-autoescola-icon: 217 91% 65%;
+    --benefit-farmacia: 138 50% 25%;
+    --benefit-farmacia-icon: 160 84% 45%;
+    --benefit-oficina: 48 70% 25%;
+    --benefit-oficina-icon: 25 95% 60%;
+    --benefit-vale-gas: 33 70% 25%;
+    --benefit-vale-gas-icon: 38 92% 55%;
+    --benefit-papelaria: 269 50% 25%;
+    --benefit-papelaria-icon: 280 65% 70%;
+    --benefit-otica: 183 70% 25%;
+    --benefit-otica-icon: 187 85% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.4s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
